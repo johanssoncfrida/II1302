@@ -10,11 +10,8 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
       <br />
 
       <div className="container">
-      <form onSubmit={(e) => handleSubmit(e)} className="white">
-        
-          
-        <h5 className="grey-text text-darken-3">New Message</h5>
-
+      <h5 className="grey-text text-darken-3">New Message</h5>
+      <form className="white">
         <div className="input-field">
           <input
             placeholder="Message"
@@ -23,15 +20,14 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
             onChange={(e) => handleChange(e)}
           />
         </div>
-        
-
         <div className="input-field">
-          <NavLink
-          to="/currentmessage"
-          className="btn btn-large orange hoverable"
-        >
-          Save
-        </NavLink>
+        
+        <button onClick={(e) => handleSubmit(e)}>
+        <NavLink to="/currentmessage">
+        Submit
+        </NavLink>  
+        </button>
+        
         </div>
         
         

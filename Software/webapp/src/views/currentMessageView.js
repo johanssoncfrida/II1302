@@ -7,7 +7,6 @@ const CurrentMessageView = ({ currentMessage }) => {
       <h1 className="header center orange-text">
         Current Message
       </h1>
-     {console.log("From view " + currentMessage)}
       <h3> {currentMessage} </h3>
       <br />
       <div className="row center">
@@ -16,6 +15,12 @@ const CurrentMessageView = ({ currentMessage }) => {
           className="btn btn-large orange hoverable"
         >
           New message
+        </NavLink>
+        <NavLink
+          to="/"
+          className="btn btn-large orange hoverable"
+        >
+          Home
         </NavLink>
       </div>
      

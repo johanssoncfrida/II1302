@@ -1,5 +1,5 @@
-import React, {Component } from "react";
-import NewMessageView from "../views/newMessageView";
+import {Component } from "react";
+import NewMessageView from "../views/NewMessageView";
 import firebase from "firebase/app";
 import "firebase/database";
 
@@ -9,13 +9,14 @@ class NewMessage extends Component {
     }
 
     handleChange = (e) => {
+
         this.setState({
             message: e.target.value
         })
       };
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         firebase.database().ref("message").set(this.state);
       };
 
