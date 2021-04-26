@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const LoginView = ({handleSubmit, handleChange,handleButton}) => {
+const SignInView = ({handleSubmit, handleChange,handleButton}) => {
     return ( 
     <div className="login">
       <form onSubmit={(e) => handleSubmit(e)} className="white">
@@ -39,4 +39,4 @@ const LoginView = ({handleSubmit, handleChange,handleButton}) => {
 };
         
  
-export default LoginView;
+export default SignInView;

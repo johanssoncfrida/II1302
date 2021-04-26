@@ -1,5 +1,7 @@
+//new name
+
 import {Component } from "react";
-import NewMessageView from "../views/NewMessageView";
+import NewMessageView from "../views/newMessageView";
 import firebase from "firebase/app";
 import "firebase/database";
 

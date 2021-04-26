@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const NavbarView = () => {
+const HeaderView = () => {
     return ( 
         <div className="navbar">
             <h1>Door Display </h1>
@@ -16,4 +16,4 @@ const NavbarView = () => {
      );
 }
  
-export default NavbarView;
+export default HeaderView;

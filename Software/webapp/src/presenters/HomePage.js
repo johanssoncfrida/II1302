@@ -1,19 +1,21 @@
-import Navbar from "./Navbar";
-import HomeMenuPresenter from "./HomeMenu";
-import LoginPresenter from "./Login";
+//new name
+
+import Header from "./header";
+import HomeMenu from "./homeMenu";
+import SignIn from "./signIn";
 
 const HomePage = () => {
     return ( 
         <div className="HomePage">
             <div className="childNavbar">
-                <Navbar />
+                <Header />
             </div>
             <div className="parentHomePage">
             <div className="childHomePage">
-                <LoginPresenter />
+                <SignIn />
             </div>
             <div className="childHomePage">
-                <HomeMenuPresenter />
+                <HomeMenu />
             </div>
             </div>
             

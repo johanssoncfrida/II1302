@@ -1,0 +1,1 @@
+//Constants for actions, eg. ADD_USER

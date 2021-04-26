@@ -1,3 +1,5 @@
+//new name
+
 const Menu = () => {
     return ( 
         <div className= "menuview">

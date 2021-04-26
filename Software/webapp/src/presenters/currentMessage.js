@@ -1,5 +1,5 @@
 import { Component } from "react";
-import CurrentMessageView from "../views/CurrentMessageView";
+import CurrentMessageView from "../views/currentMessageView";
 import firebase from "firebase/app";
 import "firebase/database";
 
