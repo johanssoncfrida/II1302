@@ -1,6 +1,6 @@
 //new name
 
-const Menu = () => {
+const HomeMenuView = () => {
     return ( 
         <div className= "menuview">
             <p className = "menu-choice">Home</p>
@@ -12,4 +12,4 @@ const Menu = () => {
      );
 }
  
-export default Menu;
+export default HomeMenuView;

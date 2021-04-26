@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CurrentMessage from "./presenters/currentMessage";
 import NewMessage from "./presenters/newMessage";
-import HomePage from "./presenters/homePage";
+import HomePage from "./presenters/homePage"
 
 function App() {
   return (
