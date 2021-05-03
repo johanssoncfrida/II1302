@@ -1,40 +1,45 @@
 import { NavLink } from "react-router-dom";
 
+
 const NewMessageView = ({handleChange, handleSubmit}) => {
   return (
-    <div>
+    <div id = "newMessage">
 
-      <h1 className="header center orange-text">
-        Create a new message
+      <h1 className="header-message">
+        Enter your message
       </h1>
       <br />
 
-      <div className="container">
-      <h5 className="grey-text text-darken-3">New Message</h5>
-      <form className="white">
-        <div className="input-field">
+      <div >
+      <form >
+        <div classname = "inputarea">
           <input
-            placeholder="Message"
+            classname = "inputfield"
+            placeholder="Please, type in your message here..."
             type="message"
-            id="message"
+            maxLength="30"
             onChange={(e) => handleChange(e)}
           />
-        </div>
-        <div className="input-field">
-        
-        <button onClick={(e) => handleSubmit(e)}>
-        <NavLink to="/currentmessage">
+          
+        <button id="newMessageButton" onClick={(e) => handleSubmit(e)}>
+        <NavLink id="newMessageButton" to="/currentmessage">
         Submit
-        </NavLink>  
+        </NavLink>
         </button>
-        
         </div>
-        
-        
       </form>
+      <div id="formcheckbox">
+        <form  action="#">
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Save to messages</span>
+            </label>
+          </p>
+        </form>
+      </div>
     </div>
-     
-    </div>
+  </div>
   );
 };
 

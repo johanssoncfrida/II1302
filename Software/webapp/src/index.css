@@ -35,6 +35,15 @@ code {
 .navbar h1 {
   color: #333;
 }
+
+#officeheader {
+  color: #333;
+  margin-top: 100px;
+  margin-left: -50px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
 .navbar .links {
   margin-left: auto;
   margin-bottom: -50px;
@@ -95,3 +104,34 @@ code {
   cursor: pointer;
   color: black;
 }
+
+/*New Message*/
+
+.header-message{
+  color: #333;
+}
+input[type=message] {
+  width: 40%;
+  padding: 12px 30px;
+  margin: 8px 0;
+  background-color:rgb(253, 251, 251);
+  border-color: rgb(253, 251, 251);
+  border-radius: 5px;
+}
+ #newMessageButton {
+   background-color: #333;
+   color:#f2f2f2;
+   margin-left:10px;
+   padding: 3px 5px 3px 2px;
+   border-radius: 5px;
+   font-size: 20px;
+   }
+
+   #formcheckbox {
+     width: 1200px;
+     float:right;
+   }
+   .formcheckbox {
+    float:right;
+   }
+   
