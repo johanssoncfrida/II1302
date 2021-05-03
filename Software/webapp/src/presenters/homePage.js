@@ -7,9 +7,6 @@ import SignIn from "./signIn";
 const HomePage = () => {
     return ( 
         <div className="HomePage">
-            <div className="childNavbar">
-                <Header />
-            </div>
             <div className="parentHomePage">
             <div className="childHomePage">
                 <SignIn />
