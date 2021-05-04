@@ -1,0 +1,6 @@
+//Constants for actions, eg. ADD_USER
+
+export const GET_CURRENT_MESSAGE = "GET_CURRENT_MESSAGE";
+export const SET_CURRENT_MESSAGE = "SET_CURRENT_MESSAGE";
+export const GET_MESSAGE_ERROR = "GET_MESSAGE_ERROR";
+export const SET_MESSAGE_ERROR = "SET_MESSAGE_ERROR";
