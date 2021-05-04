@@ -1,35 +1,37 @@
 import { Component } from "react";
 import CurrentMessageView from "../views/currentMessageView";
-import firebase from "firebase/app";
-import "firebase/database";
+import { connect } from 'react-redux';
+import { getCurrentMessage } from "../store/actions/messageActions";
 
 class CurrentMessage extends Component {
-  state = {
-    currentMessage: ""
-  }
+  
   componentDidMount() {
-    const dbRef = firebase.database().ref("message");
-    dbRef.get().then((snapshot) => {
-      if (snapshot.exists()) {
-        this.setState({ currentMessage: snapshot.val().message });
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-    console.error(error);
-  });
-  }
-
+    // Updates the Redux store with the message currently 
+    // stored in Firebase Realtime Database
+    this.props.getCurrentMessage();
+  };
 
   render() {
-    if (this.state.currentMessage) {
-      return CurrentMessageView({currentMessage: this.state.currentMessage});
-    }
-    else
-     return <div></div>
-    
-  }
+    // Using Redux to get current message
+    const { currentMessage } = this.props;
+    if (currentMessage) {
+      return CurrentMessageView({ currentMessage: currentMessage });
+    } else {
+      return <div></div>;
+    };
+  };
 }
 
+const mapStateToProps = (state) => {
+  return { 
+    currentMessage: state.message.currentMessage
+  };
+};
 
-export default CurrentMessage;
+const mapDispatchToProps = (dispatch) => {
+  return { 
+    getCurrentMessage: () => dispatch(getCurrentMessage())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CurrentMessage);

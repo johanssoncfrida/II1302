@@ -1,32 +1,34 @@
-//new name
-
-import {Component } from "react";
+import { Component } from "react";
 import NewMessageView from "../views/newMessageView";
-import firebase from "firebase/app";
-import "firebase/database";
+import { connect } from 'react-redux';
+import { setCurrentMessage } from "../store/actions/messageActions";
 
 class NewMessage extends Component {
     state = {
         message: ""
-    }
+    };
 
     handleChange = (e) => {
-
         this.setState({
             message: e.target.value
         })
-      };
+    };
 
     handleSubmit = (e) => {
         e.preventDefault()
-        firebase.database().ref("message").set(this.state);
-      };
+        this.props.setCurrentMessage(this.state)
+    };
 
-      render() {
+    render() {
         return NewMessageView({handleSubmit: this.handleSubmit,
         handleChange: this.handleChange});
-      }
+    };
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCurrentMessage: (newMessage) => dispatch(setCurrentMessage(newMessage))
+  };
+};
 
-export default NewMessage;
+export default connect(null, mapDispatchToProps)(NewMessage);
