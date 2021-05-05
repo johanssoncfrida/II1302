@@ -2,6 +2,7 @@ import { Component } from "react";
 import NewMessageView from "../views/newMessageView";
 import { connect } from 'react-redux';
 import { setCurrentMessage } from "../store/actions/messageActions";
+import { Redirect } from "react-router";
 
 class NewMessage extends Component {
     state = {
@@ -11,7 +12,7 @@ class NewMessage extends Component {
     handleChange = (e) => {
         this.setState({
             message: e.target.value
-        })
+        });
     };
 
     handleSubmit = (e) => {
@@ -20,10 +21,23 @@ class NewMessage extends Component {
     };
 
     render() {
-        return NewMessageView({handleSubmit: this.handleSubmit,
-        handleChange: this.handleChange});
+        const { auth } = this.props;
+
+        if (!auth.uid) {
+            return <Redirect to="/"/>
+        } else {
+            return NewMessageView({ handleSubmit: this.handleSubmit,
+                handleChange: this.handleChange 
+            });
+        };
     };
 }
+
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth,
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -31,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(NewMessage);
+export default connect(mapStateToProps, mapDispatchToProps)(NewMessage);

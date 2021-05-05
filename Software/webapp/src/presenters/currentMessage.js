@@ -2,6 +2,7 @@ import { Component } from "react";
 import CurrentMessageView from "../views/currentMessageView";
 import { connect } from 'react-redux';
 import { getCurrentMessage } from "../store/actions/messageActions";
+import { Redirect } from "react-router";
 
 class CurrentMessage extends Component {
   
@@ -13,18 +14,24 @@ class CurrentMessage extends Component {
 
   render() {
     // Using Redux to get current message
-    const { currentMessage } = this.props;
-    if (currentMessage) {
-      return CurrentMessageView({ currentMessage: currentMessage });
+    const { currentMessage, auth } = this.props;
+
+    if (!auth.uid) {
+      return <Redirect to="/"/>
     } else {
-      return <div></div>;
+      if (currentMessage) {
+        return CurrentMessageView({ currentMessage: currentMessage });
+      } else {
+        return CurrentMessageView({ currentMessage: "No current message." });
+      };
     };
   };
 }
 
 const mapStateToProps = (state) => {
   return { 
-    currentMessage: state.message.currentMessage
+    currentMessage: state.message.currentMessage,
+    auth: state.firebase.auth,
   };
 };
 

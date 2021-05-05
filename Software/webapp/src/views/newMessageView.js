@@ -12,9 +12,9 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
 
       <div >
       <form >
-        <div classname = "inputarea">
+        <div className = "inputarea">
           <input
-            classname = "inputfield"
+            className = "inputfield"
             placeholder="Please, type in your message here..."
             type="message"
             maxLength="30"
@@ -22,9 +22,9 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
           />
           
         <button id="newMessageButton" onClick={(e) => handleSubmit(e)}>
-        <NavLink id="newMessageButton" to="/currentmessage">
-        Submit
-        </NavLink>
+          <NavLink id="newMessageButton" to="/currentmessage">
+            Submit
+          </NavLink>
         </button>
         </div>
       </form>

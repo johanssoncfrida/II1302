@@ -1,8 +1,27 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import SignedInLinks from './signedInLink';
+import SignedOutLinks from './signedOutLink';
 import HeaderView from "../views/headerView";
-const Header = () => {
-    return ( 
-        <HeaderView />
-     );
-}
+
+const Header = (props) => {
+    const { auth, profile } = props;
+    const authenticated = auth.uid;
+    const links = authenticated ? (
+        <SignedInLinks /> 
+    ) : (
+        <SignedOutLinks />
+    );
+    const goTo = auth.uid ? "currentmessage" : "/";
+
+    return HeaderView({ goTo, links, authenticated, firstName: profile.firstname });
+};
+
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth,
+        profile: state.firebase.profile,
+    };
+};
  
-export default Header;
+export default connect(mapStateToProps)(Header);
