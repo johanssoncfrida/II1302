@@ -1,0 +1,10 @@
+14:44:50 **** Incremental Build of configuration Debug for project DoorDisplay ****
+make -j8 all 
+arm-none-eabi-size   DoorDisplay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12044	     20	   1700	  13764	   35c4	DoorDisplay.elf
+Finished building: default.size.stdout
+ 
+
+14:44:50 Build Finished. 0 errors, 0 warnings. (took 305ms)
+

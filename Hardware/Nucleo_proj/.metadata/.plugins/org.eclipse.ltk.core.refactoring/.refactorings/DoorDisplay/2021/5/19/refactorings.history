@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DoorDisplay/Core/Src/funclib&apos; to &apos;funclib.c&apos;" description="Rename resource &apos;funclib&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/funclib" name="funclib.c" stamp="1620217681685" updateReferences="true"/>
+</session>

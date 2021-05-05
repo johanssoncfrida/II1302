@@ -1,0 +1,31 @@
+14:44:14 **** Incremental Build of configuration Debug for project DoorDisplay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/tstmain.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tstmain.d" -MT"Core/Src/tstmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tstmain.o"
+arm-none-eabi-gcc -o "DoorDisplay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Oliver\Documents\Studier\ProjektMetoder_II1302\DoorDisplay\Hardware\Nucleo_proj\DoorDisplay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DoorDisplay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DoorDisplay.elf
+ 
+arm-none-eabi-objdump -h -S  DoorDisplay.elf  > "DoorDisplay.list"
+arm-none-eabi-objcopy  -O binary  DoorDisplay.elf  "DoorDisplay.bin"
+arm-none-eabi-size   DoorDisplay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12044	     20	   1700	  13764	   35c4	DoorDisplay.elf
+Finished building: default.size.stdout
+ 
+Finished building: DoorDisplay.bin
+ 
+Finished building: DoorDisplay.list
+ 
+14:44:33 **** Incremental Build of configuration Debug for project DoorDisplay ****
+make -j8 all 
+arm-none-eabi-size   DoorDisplay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12044	     20	   1700	  13764	   35c4	DoorDisplay.elf
+Finished building: default.size.stdout
+ 
+14:44:50 **** Incremental Build of configuration Debug for project DoorDisplay ****
+make -j8 all 
+arm-none-eabi-size   DoorDisplay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12044	     20	   1700	  13764	   35c4	DoorDisplay.elf
+Finished building: default.size.stdout
+ 
