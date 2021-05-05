@@ -6,8 +6,10 @@ import { GET_MESSAGE_ERROR } from './actionTypes';
 import { SET_MESSAGE_ERROR } from './actionTypes';
 
 export const getCurrentMessage = () => {
-    return (dispatch) => {
-        const dbRef = firebase.database().ref("message");
+    return (dispatch, getState) => {
+        const state = getState();
+        const userId = state.firebase.auth.uid;
+        const dbRef = firebase.database().ref("users/" + userId + "/message");
 
         dbRef.get().then((snapshot) => {
             if (snapshot.exists()) {
@@ -22,8 +24,10 @@ export const getCurrentMessage = () => {
 };
 
 export const setCurrentMessage = (newMessage) => {
-    return (dispatch) => {
-        const dbRef = firebase.database().ref("message");
+    return (dispatch, getState) => {
+        const state = getState();
+        const userId = state.firebase.auth.uid;
+        const dbRef = firebase.database().ref("users/" + userId + "/message");
 
         dbRef.set(newMessage).then(() => {
             dispatch({ type: SET_CURRENT_MESSAGE });

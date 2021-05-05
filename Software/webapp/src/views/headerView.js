@@ -1,20 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const HeaderView = () => {
+const HeaderView = ({ goTo, links, authenticated, firstName }) => {
     return ( 
         <div className="navbar">
-            <h1>Door Display </h1>
-            <p id= "officeheader">At Anders office</p>
-            <div className="links">
-                <p className = "plinks">Home</p>
-                <p className = "plinks">
-                <NavLink className = "plinks" to="/newmessage">
-                Message
-                </NavLink></p>
-                <p className = "plinks">Contact</p>
-            </div>
+            <Link to={goTo}>
+                <h1>Door Display </h1>
+            </Link> 
+            <p id="officeheader">{authenticated ? <span>Office of {firstName}</span> : <span></span>}</p>
+            {links}
         </div>
      );
-}
+};
  
 export default HeaderView;

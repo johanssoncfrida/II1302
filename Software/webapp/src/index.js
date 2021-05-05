@@ -13,6 +13,9 @@ import rootReducer from './store/reducers/rootReducer'
 import thunk from "redux-thunk";
 // import 'firebase/auth'
 
+import { useSelector } from "react-redux";
+import { isLoaded } from "react-redux-firebase";
+
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: 'users'
@@ -24,7 +27,7 @@ const store = createStore(
   rootReducer, 
   initialState, 
   compose(
-    applyMiddleware(thunk.withExtraArgument(getFirebase))
+    applyMiddleware(thunk.withExtraArgument({ getFirebase }))
   )
 );
 
@@ -34,12 +37,20 @@ const rrfProps = {
   dispatch: store.dispatch
 };
 
+function AuthIsLoaded({ children }) {
+  const auth = useSelector((state) => state.firebase.auth);
+  if (!isLoaded(auth)) {
+    return <div></div>;
+  }
+  return children;
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
-      {/*<AuthIsLoaded>*/}
+      <AuthIsLoaded>
         <App />
-      {/*</AuthIsLoaded>*/}
+      </AuthIsLoaded>
     </ReactReduxFirebaseProvider>
   </Provider>
   ,
