@@ -24,7 +24,7 @@ class SignUp extends Component {
     };
 
     render() {
-        const { auth, authError } = this.props;
+        const { auth, signUpError } = this.props;
 
         if (auth.uid) {
             return <Redirect to="/currentmessage" />;
@@ -32,7 +32,7 @@ class SignUp extends Component {
             return SignUpView({
                 handleChange: this.handleChange,
                 handleSubmit: this.handleSubmit,
-                authError,
+                signUpError,
             });
         };
     };
@@ -41,7 +41,7 @@ class SignUp extends Component {
 const mapStateToProps = (state) => {
     return {
         auth: state.firebase.auth,
-        authError: state.auth.authError
+        signUpError: state.auth.signUpError
     };
 };
 

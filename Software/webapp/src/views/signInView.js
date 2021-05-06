@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const SignInView = ({ handleSubmit, handleChange, authError }) => {
+const SignInView = ({ handleSubmit, handleChange, signInError }) => {
     return ( 
     <div className="login">
       <form onSubmit={(e) => handleSubmit(e)} className="white">
@@ -24,7 +24,7 @@ const SignInView = ({ handleSubmit, handleChange, authError }) => {
         <div className="input-field">
           <button className="btn">Log In</button>
           <div className="red-text center">
-            {authError ? <p>{authError}</p> : null}
+            {signInError ? <p>{signInError}</p> : null}
           </div>
         </div>
         <div className="center">Need an account? <NavLink to="/signup" className="red-text text-darken-2">Sign up</NavLink></div>

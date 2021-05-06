@@ -8,6 +8,7 @@ import SignIn from './presenters/signIn';
 import HomeMenu from './presenters/homeMenu';
 import HomeMessage from './presenters/homeMessage';
 import About from './presenters/about';
+import SavedMessage from './presenters/savedMessage';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route exact path = "/signup">
             <div className="HomePage">
               <div className="parentHomePage">
-                <div className="childHomePage">
+                <div className="childHomePage" id="signup">
                     <SignUp />
                 </div>
                 <div className="childHomePage">
@@ -68,7 +69,16 @@ function App() {
           </Route>
 
           <Route path="/currentmessage" component={CurrentMessage} />
-          <Route path="/newmessage" component={NewMessage} />
+          <Route path="/newmessage">
+            <div className="newMessage">
+              <div className="savedAndNewMessage" id="savedMessage">
+                <SavedMessage />
+              </div>
+              <div className="savedAndNewMessage">
+                <NewMessage />
+              </div>
+            </div>
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>

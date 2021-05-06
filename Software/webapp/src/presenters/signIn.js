@@ -22,14 +22,14 @@ class SignIn extends Component {
     };
 
     render() {
-        const { auth, authError } = this.props;
+        const { auth, signInError } = this.props;
         if (auth.uid) {
             return <Redirect to="/currentmessage" />;
         } else {
             return SignInView({
                 handleChange: this.handleChange,
                 handleSubmit: this.handleSubmit,
-                authError,
+                signInError,
             });
         };
     };
@@ -38,7 +38,7 @@ class SignIn extends Component {
 const mapStateToProps = (state) => {
     return {
         auth: state.firebase.auth,
-        authError: state.auth.authError,
+        signInError: state.auth.signInError,
     };
 };
 
