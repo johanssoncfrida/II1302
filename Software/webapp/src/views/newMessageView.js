@@ -21,8 +21,8 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
             onChange={(e) => handleChange(e)}
           />
           
-        <button id="newMessageButton" onClick={(e) => handleSubmit(e)}>
-          <NavLink id="newMessageButton" to="/currentmessage">
+        <button className="MessageButton" onClick={(e) => handleSubmit(e)}>
+          <NavLink className="MessageButton" to="/currentmessage">
             Submit
           </NavLink>
         </button>
@@ -32,8 +32,8 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
         <form  action="#">
           <p>
             <label>
-              <input type="checkbox" />
-              <span>Save to messages</span>
+              <input type="checkbox"/>
+              <span id="checkboxtext">Save to messages</span>
             </label>
           </p>
         </form>

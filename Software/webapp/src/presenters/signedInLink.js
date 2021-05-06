@@ -13,7 +13,7 @@ const SignedInLinks = (props) => {
             </p>
             <p className = "plinks">
                 <NavLink className = "plinks" to="/newmessage">
-                    Message
+                     New Message
                 </NavLink>
             </p>
             <a className = "plinks" onClick={props.signOut}>Sign out</a>

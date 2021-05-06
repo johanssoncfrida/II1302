@@ -4,7 +4,8 @@ import { SIGNUP_SUCCESS, SIGNUP_ERROR,
 } from '../actions/actionTypes';
 
 const initState = {
-    authError: null
+    signInError: null,
+    signUpError: null,
 };
 
 const authReducer = (state = initState, action) => {
@@ -12,22 +13,22 @@ const authReducer = (state = initState, action) => {
         case SIGNUP_SUCCESS: 
             return {
                 ...state,
-                authError: null,
+                signUpError: null,
             };
         case SIGNUP_ERROR:
             return {
                 ...state,
-                authError: "Sign up failed",
+                signUpError: "Sign up failed",
             };
         case SIGNIN_SUCCESS: 
             return {
                 ...state,
-                authError: null,
+                signInError: null,
             };
         case SIGNIN_ERROR:
             return {
                 ...state,
-                authError: "Sign in failed",
+                signInError: "Sign in failed",
             };
         case SIGNOUT_SUCCESS: 
             return state;

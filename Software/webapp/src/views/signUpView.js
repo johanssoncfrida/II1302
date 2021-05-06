@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const SignUpView = ({
   handleSubmit,
   handleChange,
-  authError,
+  signUpError,
   }) => {
   return (
     <div className="container">
@@ -55,7 +55,7 @@ const SignUpView = ({
         <div className="input-field">
           <button className="btn red darken-4 z-depth-0">Sign up</button>
           <div className="red-text center">
-            {authError ? <p>{authError}</p> : null}
+            {signUpError ? <p>{signUpError}</p> : null}
           </div>
         </div>
         <div className="center">Already have an account? <NavLink to="/" className="red-text text-darken-2">Sign in</NavLink></div>

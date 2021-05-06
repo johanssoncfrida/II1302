@@ -11,7 +11,7 @@ const CurrentMessageView = ({ currentMessage }) => {
                 <p>{currentMessage}</p>
               </div>
             </div>
-          <NavLink to="/newmessage" className="btn hoverable">New message<i className="material-icons left white-text">create</i></NavLink>
+          <NavLink to="/newmessage" className="MessageButton" id = "currentMessageBtn"> New Message <i className="material-icons left white-text">create</i></NavLink>
         </div>
       </div>
     </div>
