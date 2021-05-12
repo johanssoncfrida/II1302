@@ -3,7 +3,7 @@
  * It's a HTTPS client to access the user's messages in the Firebase Realtime Database for our project.
  * Written by Oliver Antal (builds gradually on the BasicHTTPSClient.ino example code sketch from the Arduino IDE)
  * 
- * May 2021
+ * 12 May 2021
  * 
  * Original file name: BasicHTTPSClient.ino, Created on: 20.08.2018
  * 
@@ -26,7 +26,15 @@ const uint8_t fingerprint[20] = {0x49, 0xE0, 0x54, 0x6C, 0xF8, 0xC0, 0xCC, 0x79,
 
 ESP8266WiFiMulti WiFiMulti;
 
+// function signatures START
+void Test_program(void);
+void Project(void);
+// implement these two
+// function signatures END
+
 void setup() {
+
+Test_program();
 
   // Initialize pin settings to enable blinking LED
   pinMode(LED_BUILTIN, OUTPUT); // initialize the LED_BUILTIN pin as output.
@@ -105,4 +113,29 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH); // turn off LED while attempting to do HTTP operations. HIGH means "turned off"
   Serial.println("Wait 5s before next round...");
   delay(5000);
+}
+
+
+
+void Test_program(){
+  pinMode(LED_BUILTIN, OUTPUT); // initialize the LED_BUILTIN pin as output.
+  // 1 = true
+  // 0 = false
+  while(1){
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(150);
+      digitalWrite(LED_BUILTIN, HIGH);  
+      delay(150);
+      }
+}
+void Project(void){
+  pinMode(LED_BUILTIN, OUTPUT); // initialize the LED_BUILTIN pin as output.
+  // 1 = true
+  // 0 = false
+  while(1){
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(1000);
+      digitalWrite(LED_BUILTIN, HIGH);  
+      delay(1000);
+      }
 }
