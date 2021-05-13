@@ -1,0 +1,4 @@
+tstmain.c:58:5:main	8	static
+tstmain.c:124:6:SystemClock_Config	232	static
+tstmain.c:197:6:HAL_TIM_PeriodElapsedCallback	16	static
+tstmain.c:214:6:Error_Handler	4	static
