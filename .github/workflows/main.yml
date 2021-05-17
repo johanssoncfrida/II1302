@@ -14,11 +14,11 @@ jobs:
         with:
           node-version: '12'
       - run: npm install
-      - run: npm run build
+      - run: CI=false npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           expires: 30d
-          projectId: fir-sample-b5510
+          projectId: door-display-74e1f
           channelId: live
