@@ -53,7 +53,7 @@ const SignUpView = ({
         <p className="grey-text text-darken-2">All fields are required.</p>
 
         <div className="input-field">
-          <button className="btn red darken-4 z-depth-0">Sign up</button>
+          <button className="btn">Sign up</button>
           <div className="red-text center">
             {signUpError ? <p>{signUpError}</p> : null}
           </div>

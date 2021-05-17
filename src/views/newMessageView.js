@@ -5,9 +5,9 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
   return (
     <div id = "newMessage">
 
-      <h1 className="header-message">
+      <h4 className="header-message">
         Enter your message
-      </h1>
+      </h4>
       <br />
 
       <div >
@@ -28,7 +28,7 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
         </button>
         </div>
       </form>
-      <div id="formcheckbox">
+      {/* <div id="formcheckbox">
         <form  action="#">
           <p>
             <label>
@@ -37,7 +37,7 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
             </label>
           </p>
         </form>
-      </div>
+      </div> */}
     </div>
   </div>
   );

@@ -6,9 +6,9 @@ import Header from './presenters/header';
 import SignUp from './presenters/signUp';
 import SignIn from './presenters/signIn';
 import HomeMenu from './presenters/homeMenu';
-import HomeMessage from './presenters/homeMessage';
+//import HomeMessage from './presenters/homeMessage';
 import About from './presenters/about';
-import SavedMessage from './presenters/savedMessage';
+//import SavedMessage from './presenters/savedMessage';
 
 function App() {
   return (
@@ -42,7 +42,7 @@ function App() {
             </div>
           </Route>
 
-          <Route exact path = "/messages">
+          {/* <Route exact path = "/messages">
             <div className="HomePage">
               <div className="parentHomePage">
                 <div className="childHomePage">
@@ -53,7 +53,7 @@ function App() {
                 </div>
               </div> 
             </div>
-          </Route>
+          </Route> */}
 
           <Route exact path = "/about">
             <div className="HomePage">
@@ -71,9 +71,9 @@ function App() {
           <Route path="/currentmessage" component={CurrentMessage} />
           <Route path="/newmessage">
             <div className="newMessage">
-              <div className="savedAndNewMessage" id="savedMessage">
+            {/*   <div className="savedAndNewMessage" id="savedMessage">
                 <SavedMessage />
-              </div>
+              </div> */}
               <div className="savedAndNewMessage">
                 <NewMessage />
               </div>

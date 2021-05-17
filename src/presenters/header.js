@@ -14,7 +14,7 @@ const Header = (props) => {
     );
     const goTo = auth.uid ? "currentmessage" : "/";
 
-    return HeaderView({ goTo, links, authenticated, firstName: profile.firstname });
+    return HeaderView({ goTo, links, authenticated, firstName: profile.firstname, lastName: profile.lastname });
 };
 
 const mapStateToProps = (state) => {

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 const SignInView = ({ handleSubmit, handleChange, signInError }) => {
     return ( 
     <div className="login">
-      <h1>NEW TESTTTT</h1>
       <form onSubmit={(e) => handleSubmit(e)} className="white">
         
         <div className="input-field">
