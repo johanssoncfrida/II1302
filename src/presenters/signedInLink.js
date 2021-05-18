@@ -16,6 +16,7 @@ const SignedInLinks = (props) => {
                      New Message
                 </NavLink>
             </p>
+            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a className = "plinks" onClick={props.signOut}>Sign out</a>
         </div>
     );
