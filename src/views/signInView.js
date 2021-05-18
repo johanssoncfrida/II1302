@@ -22,7 +22,7 @@ const SignInView = ({ handleSubmit, handleChange, signInError }) => {
           />
         </div>
         <div className="input-field">
-          <button className="btn">Log In</button>
+          <button className="btn">Sign In</button>
           <div className="red-text center">
             {signInError ? <p>{signInError}</p> : null}
           </div>
