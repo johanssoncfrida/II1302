@@ -8,7 +8,6 @@ const SignUpView = ({
   return (
     <div className="container">
       <form onSubmit={(e) => handleSubmit(e)} className="white">
-        <h5 className="grey-text text-darken-3">Sign Up</h5>
         <p className="red-text text-darken-2">
           Please do not use your real email address or password.
         </p>
