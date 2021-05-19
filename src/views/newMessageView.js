@@ -1,45 +1,31 @@
 import { NavLink } from "react-router-dom";
+import 'materialize-css';
+import { Textarea, Icon, Button } from 'react-materialize';
 
 
 const NewMessageView = ({handleChange, handleSubmit}) => {
-  return (
-    <div id = "newMessage">
+    return (
+        <div id = "newMessage">
 
-      <h4 className="header-message">
-        Enter your message
-      </h4>
-      <br />
+        <h4 className="header-message">Create a new message</h4>
+        <br />
 
-      <div >
-      <form >
-        <div className = "inputarea">
-          <input
-            className = "inputfield"
-            placeholder="Please, type in your message here..."
-            type="message"
-            maxLength="30"
-            onChange={(e) => handleChange(e)}
-          />
-          
-        <button className="MessageButton" onClick={(e) => handleSubmit(e)}>
-          <NavLink className="MessageButton" to="/currentmessage">
-            Submit
-          </NavLink>
-        </button>
+        <div>
+            <form >
+                <div className = "inputarea" onChange={(e) => handleChange(e)}>
+                    <Textarea data-length={20} id="Textarea-12" label="Please enter your message here."/>
+                    <br />
+                </div>
+
+                <button className="btn" onClick={(e) => handleSubmit(e)}>
+                    <NavLink to="/currentmessage" className="white-text">
+                        <i class="material-icons white-text left">send</i>Submit
+                    </NavLink>
+                </button>
+            </form>
         </div>
-      </form>
-      {/* <div id="formcheckbox">
-        <form  action="#">
-          <p>
-            <label>
-              <input type="checkbox"/>
-              <span id="checkboxtext">Save to messages</span>
-            </label>
-          </p>
-        </form>
-      </div> */}
-    </div>
-  </div>
+        
+        </div>
   );
 };
 
