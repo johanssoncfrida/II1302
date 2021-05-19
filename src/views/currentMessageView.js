@@ -6,12 +6,21 @@ const CurrentMessageView = ({ currentMessage }) => {
       <div className="row">
         <div className="col l6 offset-l3 valign">
           <h4>Current Message</h4>
+          <br />
+
             <div className="card">
               <div className="card-content">
                 <p>{currentMessage}</p>
               </div>
             </div>
-          <NavLink to="/newmessage" className="MessageButton" id = "currentMessageBtn"> New Message <i className="material-icons left white-text">create</i></NavLink>
+            <br />
+
+            <button className="btn">
+              <NavLink to="/newmessage" className="white-text">
+                <i class="material-icons white-text left">create</i>New message
+              </NavLink>
+            </button>
+
         </div>
       </div>
     </div>
