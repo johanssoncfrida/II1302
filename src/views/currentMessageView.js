@@ -2,10 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const CurrentMessageView = ({ currentMessage }) => {
   return (
-    <div>
-      <div className="row">
+      <div className="row" id= "currentmessage">
         <div className="col l6 offset-l3 valign">
-          <h4>Current Message</h4>
+          <h4>Current message</h4>
           <br />
 
             <div className="card">
@@ -23,7 +22,7 @@ const CurrentMessageView = ({ currentMessage }) => {
 
         </div>
       </div>
-    </div>
+   
   );
 };
 

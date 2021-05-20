@@ -27,7 +27,7 @@ code {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   border-bottom: 2px solid #f2f2f2;
 
@@ -60,7 +60,7 @@ code {
   cursor: pointer;
 }
 .parentHomePage {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 20px;
   display:flex;
@@ -92,6 +92,10 @@ code {
 }
 .btn:hover{
   background-color: black;
+}
+
+#signuptext {
+  font-weight: bold;
 }
 /*Menu page*/
 .menuview {
@@ -136,6 +140,10 @@ code {
 #currentMessageBtn {
   margin-left: -40px;
 }
+#currentmessage {
+  margin-top:60px;
+}
+
 /*New Message*/
 
 .header-message{
@@ -172,5 +180,33 @@ input[type=message] {
   
   /*Signup*/
   #signup {
-    margin-top:-10px;
+    margin-top:-5px;
   }
+  #aboutview {
+    margin-top:-5px;
+  }
+  
+/*Textarea for materiallize*/
+  .input-field textarea{
+    color: #333;
+    border-bottom: 1px solid #333;
+  }
+  .input-field textarea:focus{
+    color: #333;
+    border-bottom: 1px solid #333 !important;
+    box-shadow: 0 1px 0 0 #333 !important;
+  }
+  .input-field textarea:focus + label{
+    color: #333 !important;
+  }
+
+  .input-field input {
+    color: #333 !important;
+  }
+  .input-field input:focus {
+    border-bottom: 1px solid #333 !important;
+    box-shadow: 0 1px 0 0 #333 !important;
+  }
+ 
+
+  

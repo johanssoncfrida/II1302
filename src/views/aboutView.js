@@ -2,7 +2,7 @@ import video from '../About.mp4';
 
 const AboutView = () => {
     return (
-        <div>
+        <div className ="aboutview">
             <h3>About Door Display</h3>
             <p className="left-align"> This web application is created as a part of a project
             task in the course II1302 at KTH. The web application is used together with a physical

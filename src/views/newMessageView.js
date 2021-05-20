@@ -13,7 +13,7 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
         <div>
             <form >
                 <div className = "inputarea" onChange={(e) => handleChange(e)}>
-                    <Textarea data-length={20} id="Textarea-12" label="Please enter your message here."/>
+                    <Textarea data-length={20} maxLength = {20} id="Textarea-12" label="Please enter your message here."/>
                     <br />
                 </div>
 
@@ -28,5 +28,7 @@ const NewMessageView = ({handleChange, handleSubmit}) => {
         </div>
   );
 };
+
+
 
 export default NewMessageView;
