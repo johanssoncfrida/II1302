@@ -32,3 +32,9 @@ $ npm test
 ## Run Selenium tests
 
 Before the Selenium tests can be run, Geckodriver must be added in your system's PATH variable.
+
+To run the test, run this command in /src/ directory:
+
+```
+$ node selenium.js
+```

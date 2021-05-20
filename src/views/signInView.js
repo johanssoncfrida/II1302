@@ -27,7 +27,7 @@ const SignInView = ({ handleSubmit, handleChange, signInError }) => {
             {signInError ? <p>{signInError}</p> : null}
           </div>
         </div>
-        <div className="center">Need an account? <NavLink to="/signup" className="red-text text-darken-2">Sign up</NavLink></div>
+        <div className="center">Need an account? <NavLink to="/signup" className="green-text text-darken-2" id= "signuptext">Sign up</NavLink></div>
       </form>
     </div>
   );

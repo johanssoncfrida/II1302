@@ -58,7 +58,7 @@ function App() {
           <Route exact path = "/about">
             <div className="HomePage">
               <div className="parentHomePage">
-                <div className="childHomePage">
+                <div className="childHomePage" id="aboutview">
                     <About />
                 </div>
                 <div className="childHomePage">
