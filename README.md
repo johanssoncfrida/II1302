@@ -8,6 +8,8 @@ To update a message the user must create an account and sign in. The message can
 
 The web application project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Website: [Door Display](https://door-display-74e1f.firebaseapp.com/)
+
 ## Setup
 
 To run the web application, install it locally using npm:
